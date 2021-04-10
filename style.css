@@ -1,0 +1,104 @@
+/* Jost Variable Font */
+@font-face {
+  font-family: "Jost VF";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/jost-VF.woff2") format("woff2 supports variations"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/jost-VF.woff2") format("woff2-variations");
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 100%;
+}
+.range__italic {
+  --text-vf-wght: 400;
+  --text-vf-wdth: 100;
+  --text-vf-ital: 1;
+  --value-tag: "ital";
+  --low-value: 0;
+  --current-value: var(--text-vf-ital);
+  --high-value: 1;
+  /* Control buttons */
+}
+.range__italic .paragraph {
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95vw;
+  width: 45em;
+}
+.range__italic .paragraph .text {
+  font-family: "Jost VF", Helvetica, sans-serif;
+  font-size: 5rem;
+  font-weight: var(--text-vf-wght);
+  font-stretch: calc( var(--text-vf-wdth) * 1% );
+  font-synthesis: none;
+  font-variation-settings: "ital" var(--text-vf-ital);
+  line-height: 7rem;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+.range__italic .controls {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  margin: 2em auto;
+  text-align: center;
+  width: 20rem;
+}
+.range__italic .controls h3 {
+  display: inline;
+  font-weight: normal;
+  font-family: monospace;
+}
+.range__italic .controls label {
+  float: left;
+  height: 1px;
+  text-indent: -999em;
+  visibility: hidden;
+}
+.range__italic .controls .slider {
+  grid-column: 2/3;
+}
+.range__italic .controls .slider input {
+  width: 100%;
+}
+.range__italic .controls .value-tag {
+  grid-column: span 3;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.range__italic .controls .value-tag::before {
+  counter-reset: tag var(--value-tag);
+  content: "'" var(--value-tag) "' range";
+  font-family: sans-serif;
+}
+.range__italic .controls .low-value {
+  grid-column: 1/2;
+  text-align: left;
+  width: 2.5rem;
+}
+.range__italic .controls .low-value::before {
+  counter-reset: tag var(--low-value);
+  content: counter(tag);
+  font-family: sans-serif;
+}
+.range__italic .controls .high-value {
+  grid-column: 4/5;
+  text-align: right;
+  width: 2.5rem;
+}
+.range__italic .controls .high-value::before {
+  counter-reset: tag var(--high-value);
+  content: counter(tag);
+  font-family: sans-serif;
+}
+.range__italic .controls .current-value {
+  grid-column: 2/3;
+}
+.range__italic .controls .current-value::before {
+  counter-reset: tag var(--current-value);
+  border: solid 1px black;
+  content: counter(tag);
+  display: inline-block;
+  font-family: sans-serif;
+  min-width: 3rem;
+  margin: 0 auto;
+  padding: 0.25rem 0.25rem 0.2rem 0.25rem;
+}
