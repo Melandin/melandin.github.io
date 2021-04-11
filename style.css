@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'vhsregular';
-    src: url('vhsgx-webfont.woff2') format('woff2'),
-         url('vhsgx-webfont.woff') format('woff');
+    src: url('https://cdn.rawgit.com/Melandin/melandin.github.io/blob/main/vhsgx-webfont.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/Melandin/melandin.github.io/blob/main/vhsgx-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
