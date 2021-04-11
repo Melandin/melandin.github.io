@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'vhsregular';
+    src: url('vhsgx-webfont.woff2') format('woff2'),
+         url('vhsgx-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.r100 {
+    font-family: 'rawline', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
