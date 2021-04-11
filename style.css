@@ -12,9 +12,9 @@
   --text-vf-wdth: 100;
   --text-vf-ital: 1;
   --value-tag: "ital";
-  --low-value: 0;
+  --low-value: -20;
   --current-value: var(--text-vf-ital);
-  --high-value: 1;
+  --high-value: 20;
   /* Control buttons */
 }
 .range__italic .paragraph {
@@ -25,7 +25,7 @@
   width: 45em;
 }
 .range__italic .paragraph .text {
-  font-family: "Jost VF", Helvetica, sans-serif;
+  font-family: "vhsregular" ;
   font-size: 5rem;
   font-weight: var(--text-vf-wght);
   font-stretch: calc( var(--text-vf-wdth) * 1% );
