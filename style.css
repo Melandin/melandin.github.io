@@ -1,8 +1,8 @@
 /* Jost Variable Font */
 @font-face {
   font-family: "vhsregular";
-  src: url ("https://github.com/Melandin/melandin.github.io/blob/main/vhsgx-webfont.woff")
-    format("woff supports variations"), url("https://github.com/Melandin/melandin.github.io/blob/main/vhsgx-webfont.woff2") format("woff2-variations");
+  src: url ("https://cdn.rawgit.com/Melandin/melandin.github.io/blob/main/vhsgx-webfont.woff")
+    format("woff supports variations"), url("https://cdn.rawgit.com/Melandin/melandin.github.io/blob/main/vhsgx-webfont.woff2") format("woff2-variations");
   font-display: swap;
   font-weight: 100 900;
   font-stretch: 100%;
