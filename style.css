@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'vhsregular';
-    src: url('{{site.url}}/assetss/vhsgx-webfont.woff2') format('woff2'),
-         url('{{site.url}}/assetss/vhsgx-webfont.woff') format('woff'),
-    url('{{site.url}}/assetss/VHSGX.ttf') format ('truetype');
+    src: url('{{https://melandin.github.io}}/assetss/vhsgx-webfont.woff2') format('woff2'),
+         url('{{https://melandin.github.io}}/assetss/vhsgx-webfont.woff') format('woff'),
+    url('{{https://melandin.github.io}}/assetss/VHSGX.ttf') format ('truetype');
     font-weight: normal;
     font-style: normal;
 
