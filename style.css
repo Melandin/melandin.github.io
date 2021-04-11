@@ -6,12 +6,47 @@ font-family: 'vhsregular';
 
 }
 
+@keyframes ginto-animation {
+  from {
+    font-variation-settings:"ital" -20;
+  }
+  to {
+    font-variation-settings:"ital" 20;
+  }
+
+}
 .r100 {
     font-family: 'vhsregular', sans-serif;
+  font-variation-settings:"ital" 1;
+
     font-weight: 100;
     font-style: normal;
   color: green;
     text-align:center;
+ transition: font-variation-settings 0.3s ease;
+  animation-name: ginto-animation;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+ }
 
 
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
+
+.r200 {
+    font-family: 'vhsregular', sans-serif;
+  font-variation-settings:"ital" 1;
+
+    font-weight: 500;
+    font-style: normal;
+  color: red;
+    text-align:center;
+
+ }
+
