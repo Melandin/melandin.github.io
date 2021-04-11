@@ -26,6 +26,8 @@
 }
 .range__italic .paragraph .text {
   font-family: "vhsregular" ;
+  font-weight: normal;
+    font-style: normal;
   font-size: 5rem;
   font-weight: var(--text-vf-wght);
   font-stretch: calc( var(--text-vf-wdth) * 1% );
