@@ -85,7 +85,7 @@ text-align:center;
   --text-vf-wght: 400;
   --text-vf-wdth: 95;
   --text-vf-ital: 0;
-  --value-tag: "ital";
+  --value-tag: "GRAD";
   --low-value: -20;
   --current-value: var(--text-vf-ital);
   --high-value: 20;
@@ -99,10 +99,11 @@ text-align:center;
   width: 45em;
 }
 .range__slant .paragraph .text {
-  font-family: "vhsregular", Helvetica, sans-serif;
+  font-family: 'vhsregular', sans-serif;
+  font-variation-settings:"ital" 1;
+font-style: normal;
+  color: red;
   font-size: 5rem;
-  font-weight: var(--text-vf-wght);
-  font-stretch: calc( var(--text-vf-wdth) * 1% );
   font-variation-settings: "ital" var(--text-vf-ital);
   line-height: 7rem;
   margin: 0 auto 0 auto;
