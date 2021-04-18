@@ -1,18 +1,10 @@
-const container = document.querySelector(".container");
-const sliders = document.querySelectorAll(".slider");
-const sliderValues = document.querySelectorAll(".output");
+// get the inputs
+const inputs = [].slice.call(document.querySelectorAll('.range__slant .controls input'));
 
-// Display property values
-for (let i = 0; i < sliders.length; i++) {
-  sliderValues[i].innerHTML = sliders[i].value;
+// listen for changes
+inputs.forEach(input => input.addEventListener('change', handleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+
+function handleUpdate(e) {      document.querySelector('.range__slant').style.setProperty(`--${this.id}`, this.value);
 }
-
-// Update text property and displayed property value for each slider
-sliders.forEach(slider => {
-    const sliderIndex = slider.getAttribute("data-index");
-    const output = document.querySelector(`.output[data-index="${sliderIndex}"]`);
-    slider.oninput = function() {
-      container.style.setProperty(`--${this.id}`, this.value);
-      output.innerHTML = this.value;
-    };
-  });
