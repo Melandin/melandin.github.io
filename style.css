@@ -1,11 +1,17 @@
+body{
+  padding: 1px;
+margin:0;
+padding:0;
+
+}
+
 @font-face {
     
-    src: url(fonts/VHSGX.ttf);
+src: url(fonts/VHSGX.ttf);
 font-family: 'vhsregular';
     
 
 }
-
 @keyframes ginto-animation {
   from {
     font-variation-settings:"ital" -20;
@@ -23,6 +29,10 @@ font-family: 'vhsregular';
     font-style: normal;
   color: green;
     text-align:center;
+        background-color: #EBEBEB;
+
+
+
  transition: font-variation-settings 0.3s ease;
   animation-name: ginto-animation;
   animation-duration: 1.5s;
@@ -39,14 +49,91 @@ div {
   padding-left: 80px;
 }
 
-.r200 {
-    font-family: 'vhsregular', sans-serif;
-  font-variation-settings:"ital" 1;
+.slider {
+  --text-vf-wght: 400;  
+  --text-vf-wdth: 100;
+  --text-vf-ital: 1;
+  --value-tag: 'ital';
+  --low-value: -20;
+  --current-value: var(--text-vf-ital);
+  --high-value: 20;
 
-    font-weight: 500;
-    font-style: normal;
-  color: red;
-    text-align:center;
+}
+.container {
+   font-family: 'vhsregular', sans-serif;
+   font-variation-settings: 'ital' var(--text-vf-ital);
+ margin: 0 auto;
+  max-width: 60rem;
+  padding: 3rem;
+  text-align: center;
+}
 
- }
+.demo-text {
+  font-size: 5rem;
+   font-variation-settings:"ital" var (--text-ital);
+  margin: 0;
+}
 
+.controls {
+  margin-top: 3rem;
+}
+
+.slider-container:not(:first-child) {
+  margin-top: 3rem;
+} 
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  
+}
+
+.slider-label {
+  font-size: 1.25rem;
+  font-style: normal;
+   font-variation-settings: "ital" var(--text-ital);
+  font-weight: 650;
+}
+
+.output {
+   font-style: normal;
+  font-variation-settings: "ital" var(--text-ital);
+
+
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1rem;
+  border-radius: .25rem;
+  background: #dee7ec;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #456bd9;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #456bd9;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+.slider::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
