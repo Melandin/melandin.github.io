@@ -1,70 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>VHSCY</title>
-  <link rel="stylesheet" href="./style.css">
-  
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div contenteditable="true">
-<div class="r100"> 
-<p style="font-size:50px;">ΔΩΚΕ ΤΟΥ ΚΥΠΡΑΙΟΥ ΒΙΝΤΕΟ </p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VHSCY</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <p contenteditable="true" class="animated-text" style="font-size: 50px">
+      ΔΩΚΕ ΤΟΥ ΚΥΠΡΑΙΟΥ ΒΙΝΤΕΟ
+    </p>
 
-</div>
-</div>
+    <p class="explain">
+      ΑΥΤΟ ΠΟΥ ΒΛΕΠΕΤΕ ΠΑΡΑΚΑΤΩ ΑΠΟΤΕΛΕΙ ΜΕΡΟΣ ΤΗΣ ΕΡΕΥΝΑΣ ΜΟΥ ΜΕ ΣΚΟΠΟ ΤΗΝ ΑΝΑΒΙΩΣΗ ΤΗΣ ΚΥΠΡΙΑΚΗΣ
+      ΒΙΝΤΕΟΚΑΣΕΤΑΣ
+    </p>
 
-<p class="explain"> ΑΥΤΟ ΠΟΥ ΒΛΕΠΕΤΕ ΠΑΡΑΚΑΤΩ ΑΠΟΤΕΛΕΙ ΜΕΡΟΣ ΤΗΣ ΕΡΕΥΝΑΣ ΜΟΥ 
-ΜΕ ΣΚΟΠΟ ΤΗΝ ΑΝΑΒΙΩΣΗ ΤΗΣ ΚΥΠΡΙΑΚΗΣ ΒΙΝΤΕΟΚΑΣΕΤΑΣ </p>
-
-<div class="embed">
-<div style="text-align: center; margin: 10em 0px;">
-<div contenteditable="true">
-<button class="my-variable-text3">ΒΙΝΤΕΟ</button></div></div>
-</div>
-
-<div class= "movielist">
-<label>ΘΚΙΑΛΕΞΕ ΤΑΙΝΙΑ:
-
-<select>
-
-    <option value="">ΑΜΑΜΜΑ</option>
-    <option value="">ΤΣΙΟΡΟΝΗΣ</option>
-    <option value="">ΣΙΣΙΣΙΝΙΙΣΤΑ</option>
-    <option value="">ΠΑΠΑΠΑΠ</option> 
-</select>
-
-</div>
-
-
-<div class="container range__slant">
-
-
-  <div class="paragraph">
-
-    <div class="text">ΓΕΙΑ ΣΑΣΣΣ</div>
-
-  </div>
-  <div id='demo-controls' class="controls">
-    <div class="value-tag"></div>
-    <div class="low-value"></div>
-    <div class="slider range-slant">
-      <input type="range" name="range-slant" value="0" id="text-vf-GRAD" class="controls--slant" min="-20" max="20" step="0.01"> <label for="controls__slant">Grade</label>
+    <div class="button-wrapper">
+      <button class="button" contenteditable="true">ΒΙΝΤΕΟ</button>
     </div>
-    <div class="high-value"></div>
 
-  </div>
+    <div class="movielist">
+      <label>ΘΚΙΑΛΕΞΕ ΤΑΙΝΙΑ:</label>
 
-</div>
+      <select>
+        <option value="">ΑΜΑΜΜΑ</option>
+        <option value="">ΤΣΙΟΡΟΝΗΣ</option>
+        <option value="">ΣΙΣΙΣΙΝΙΙΣΤΑ</option>
+        <option value="">ΠΑΠΑΠΑΠ</option>
+      </select>
+    </div>
 
+    <div class="container range__slant">
+      <div class="paragraph">
+        <p class="text variable-text">ΓΕΙΑ ΣΑΣΣΣ</p>
+      </div>
 
+      <div id="demo-controls" class="controls">
+        <div class="value-tag" id="value"></div>
 
-<script  src="./script.js"></script>
-
-
-
-<!-- partial -->
-
-</body>
+        <div class="low-value"></div>
+        <input
+          type="range"
+          name="range-slant"
+          value="0"
+          id="text-grad"
+          class="controls--slant"
+          min="-20"
+          max="20"
+        />
+        <div class="high-value"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>

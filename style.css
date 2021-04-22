@@ -1,115 +1,95 @@
-var observer = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(function(entry) {
-    // Pause/Play the animation
-    if (entry.isIntersecting) entry.target.style.animationPlayState = "running"
-    else entry.target.style.animationPlayState = "paused"
-  });
-});
-
-var variableTexts = document.querySelectorAll(".vf-animation");
-variableTexts.forEach(function(el) { observer.observe(el); });
-
-
-
-body{
+body {
   padding: 1px;
-margin:0;
-padding:0;
-   
+  margin: 0;
+  padding: 0;
 }
 @font-face {
-src: url(fonts/vhswidthGX.ttf);
-font-family: 'vhswidth';
-    }
+  src: url(fonts/vhswidthGX.ttf);
+  font-family: 'vhswidth';
+}
 @font-face {
-src: url(fonts/VHSShadowGX.ttf);
-font-family: 'vhsshadow';
-    }
+  src: url(fonts/VHSShadowGX.ttf);
+  font-family: 'vhsshadow';
+}
 @font-face {
-src: url(fonts/VHSGX.ttf);
-font-family: 'vhsregular';
-    }
+  src: url(fonts/VHSGX.ttf);
+  font-family: 'vhsregular';
+}
 @keyframes ginto-animation {
   from {
-    font-variation-settings:"ital" -20;
+    font-variation-settings: 'ital' -20;
   }
   to {
-    font-variation-settings:"ital" 20;
+    font-variation-settings: 'ital' 20;
   }
-
 }
-.r100 {
-    font-family: 'vhsregular', sans-serif;
-  font-variation-settings:"ital" 1;
-font-style: normal;
+.animated-text {
+  font-family: 'vhsregular', sans-serif;
+  font-variation-settings: 'ital' 1;
+  font-style: normal;
   color: green;
-    text-align:center;
-
-        
-
- transition: font-variation-settings 0.3s ease;
+  text-align: center;
+  transition: font-variation-settings 0.3s ease;
   animation-name: ginto-animation;
   animation-duration: 1.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
- }
-
-.explain { 
- font-family: 'vhsregular';
-text-align:center;
 }
 
-.my-variable-text3 {
+.explain {
   font-family: 'vhsregular';
-  font-variation-settings: "ital" -20;
+  text-align: center;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.button {
+  font-family: 'vhsregular';
+  font-variation-settings: 'ital' -20;
   transition: font-variation-settings 0.3s ease;
 }
 
-.my-variable-text3:hover {
-  font-variation-settings:  "ital" 20;
+.button:hover {
+  font-variation-settings: 'ital' 20;
 }
 
- .my-variable-text3 {
-    font-family: 'vhsregular';
-    font-variation-settings: "ital" 0;
-    transition: font-variation-settings 0.3s ease;
-    font-size: 7vw;
-    background-color: blue;
-    color: white;
-    letter-spacing: 0;
-    border-radius: 6vw;
-    padding: 1vw 3vw 1vw;
-    outline: none;
-    border: none;
-  
-
+.button {
+  font-family: 'vhsregular';
+  font-variation-settings: 'ital' 0;
+  transition: font-variation-settings 0.3s ease;
+  font-size: 7vw;
+  background-color: blue;
+  color: white;
+  letter-spacing: 0;
+  border-radius: 6vw;
+  padding: 1vw 3vw 1vw;
+  outline: none;
+  border: none;
 }
-
 
 .movielist {
-font-family: 'vhsregular';
+  font-family: 'vhsregular';
   border-radius: 10px 30px 30px 10px;
-text-align:center;
+  text-align: center;
   font-size: 50px;
-
 }
-
 
 select {
-font-family: 'vhsregular';
-   border: solid 1px blue; 
-     width: 350px;
- font-size: 50px;
+  font-family: 'vhsregular';
+  border: solid 1px blue;
+  width: 350px;
+  font-size: 50px;
 }
-
-
 
 .range__slant {
   --text-vf-wght: 400;
   --text-vf-wdth: 95;
   --text-vf-ital: 0;
-  --value-tag: "GRAD";
+  --value-tag: 'GRAD';
   --low-value: -20;
   --current-value: var(--text-vf-ital);
   --high-value: 20;
@@ -124,11 +104,12 @@ font-family: 'vhsregular';
 }
 .range__slant .paragraph .text {
   font-family: 'vhsregular', sans-serif;
-  font-variation-settings:"ital" 1;
-font-style: normal;
+  font-variation-settings: 'ital' 1;
+  font-style: normal;
   color: red;
   font-size: 5rem;
-  font-variation-settings: "ital" var(--text-vf-ital);
+  font-variation-settings: 'ital' var(--text-vf-ital);
+  transition: font-variation-settings 0.3s ease;
   line-height: 7rem;
   margin: 0 auto 0 auto;
   text-align: center;
@@ -161,6 +142,7 @@ font-style: normal;
   grid-column: span 3;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  font-family: regular;
   text-align: left;
 }
 .range__slant .controls .value-tag::before {
