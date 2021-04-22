@@ -17,14 +17,18 @@ margin:0;
 padding:0;
    
 }
-
 @font-face {
-    
+src: url(fonts/vhswidthGX.ttf);
+font-family: 'vhswidth';
+    }
+@font-face {
+src: url(fonts/VHSShadowGX.ttf);
+font-family: 'vhsshadow';
+    }
+@font-face {
 src: url(fonts/VHSGX.ttf);
 font-family: 'vhsregular';
-    
-
-}
+    }
 @keyframes ginto-animation {
   from {
     font-variation-settings:"ital" -20;
@@ -51,7 +55,7 @@ font-style: normal;
   animation-timing-function: ease-in-out;
  }
 
-h5 { 
+.explain { 
  font-family: 'vhsregular';
 text-align:center;
 }
@@ -78,7 +82,27 @@ text-align:center;
     padding: 1vw 3vw 1vw;
     outline: none;
     border: none;
+  
+
 }
+
+
+.movielist {
+font-family: 'vhsregular';
+  border-radius: 10px 30px 30px 10px;
+text-align:center;
+  font-size: 50px;
+
+}
+
+
+select {
+font-family: 'vhsregular';
+   border: solid 1px blue; 
+     width: 350px;
+ font-size: 50px;
+}
+
 
 
 .range__slant {
