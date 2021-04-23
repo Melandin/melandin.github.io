@@ -187,105 +187,108 @@ select {
 }
 
 
-.container range__opsz {
-  --text-vf-wght: 400;
+.range__opsz {
+  --text-vf-wght: 400;  
   --text-vf-wdth: 95;
-  --text-vf-ital: 0;
+  --text-vf-opsz: 80;
   --value-tag: 'opsz';
-  --low-value: 0;
+  --low-value: 8;
   --current-value: var(--text-vf-opsz);
-  --high-value: 20;
+  --high-value: 144;
+
+  .paragraph {
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95vw;
+    width: 45em;
+  }
+
+  .paragraph .text {
+    font-family: "vhshadow", sans-serif;
+    font-size: 5rem;
+    font-weight: var(--text-vf-wght);
+    font-stretch: calc( var(--text-vf-wdth) * 1% );
+    font-variation-settings: 'opsz' var(--text-vf-opsz);
+    line-height: 7rem;
+    margin: 0 auto 0 auto;
+    text-align: center;
+  }
+
+
   /* Control buttons */
-}
-.container range__opsz .paragraphopsz {
-  background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 95vw;
-  width: 45em;
-}
-.container range__opsz .paragraphopsz .textopsz {
-  font-family: 'vhsshadow', sans-serif;
-  font-variation-settings: 'opsz', 18;
-  font-style: normal;
-  color: red;
-  font-size: 5rem;
-  font-variation-settings: 'opsz' var(--text-vf-opsz);
-  transition: font-variation-settings 0.3s ease;
-  line-height: 7rem;
-  margin: 0 auto 0 auto;
-  text-align: center;
+  .controls {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    margin: 2em auto;
+    text-align: center;
+    width: 20rem;
+
+    h3 {
+      display: inline;
+      font-weight: normal;
+      font-family: monospace;
+    }
+    label {
+      float: left;
+      height: 1px;
+      text-indent: -999em;
+      visibility: hidden;
+    }
+    .slider {
+      grid-column: 2/3;
+      input {
+        width: 100%;
+      }
+    }
+    .value-tag {
+      grid-column: span 3;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      &::before {
+        counter-reset: tag var(--value-tag);
+        content: "'" var(--value-tag) "' range";
+        font-family: sans-serif;
+      }
+   }
+    .low-value {
+      grid-column: 1/2;
+      text-align: left;
+      width: 2.5rem;
+      &::before {
+        counter-reset: tag var(--low-value);
+        content: counter(tag);
+        font-family: sans-serif;
+      }
+    }
+    .high-value{
+      grid-column: 4/5;
+      text-align: right;
+      width: 2.5rem;
+    &::before {
+       counter-reset: tag var(--high-value);
+       content: counter(tag);
+       font-family: sans-serif;
+      }
+    }
+    .current-value {
+      grid-column: 2/3;
+      &::before {
+        counter-reset: tag var(--current-value);
+        border: solid 1px black;
+        content: counter(tag);
+        display: inline-block;
+        font-family: sans-serif;
+        min-width: 3rem;
+        margin: 0 auto;
+        padding: 0.25rem 0.25rem 0.2rem 0.25rem;
+      }
+    }
+  }
 }
 
-.container range__opsz .controlsopsz {
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  margin: 2em auto;
-  text-align: center;
-  width: 20rem;
-}
-.container range__opsz .controlsopsz h3 {
-  display: inline;
-  font-weight: normal;
-  font-family: regular;
-}
-.range__opsz .controls label {
-  float: left;
-  height: 1px;
-  text-indent: -999em;
-  visibility: hidden;
-}
-.range__opsz .opszcontrols .slider {
-  grid-column: 2/3;
-}
-.range__opsz .opszcontrols .slider input {
-  width: 100%;
-}
-.range__opsz .opszcontrols .value-tag {
-  grid-column: span 3;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  font-family: regular;
-  text-align: left;
-}
-.range__opsz .opszcontrols .value-tag::before {
-  counter-reset: tag var(--value-tag);
-  content: "'" var(--value-tag) "' range";
-  font-family: sans-serif;
-}
-.range__opsz .opszcontrols .low-value {
-  grid-column: 1/2;
-  text-align: left;
-  width: 2.5rem;
-}
-.range__opsz .opszcontrols .low-value::before {
-  counter-reset: tag var(--low-value);
-  content: counter(tag);
-  font-family: sans-serif;
-}
-.range__opsz .opszcontrols .high-value {
-  grid-column: 4/5;
-  text-align: right;
-  width: 2.5rem;
-}
-.range__opsz .controls .high-value::before {
-  counter-reset: tag var(--high-value);
-  content: counter(tag);
-  font-family: sans-serif;
-}
-.range__opsz .controls .current-value {
-  grid-column: 2/3;
-}
-.range__opsz .controls .current-value::before {
-  counter-reset: tag var(--current-value);
-  border: solid 1px black;
-  content: counter(tag);
-  display: inline-block;
-  font-family: sans-serif;
-  min-width: 3rem;
-  margin: 0 auto;
-  padding: 0.25rem 0.25rem 0.2rem 0.25rem;
-}
+
 
 
 .scroll-left {

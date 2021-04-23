@@ -8,11 +8,13 @@ grad.oninput = function () {
 };
 
 
-const variableTextopsz = document.querySelector('.variable-textopsz');
-const valueopsz = document.getElementById('valueopsz');
-const gradopsz = document.getElementById('text-gradopsz');
+const inputs = [].slice.call(document.querySelectorAll('.range__opsz .controls input'));
 
-opsz.oninput = function () {
-  console.log(this.value);
-  variableText.style.fontVariationSettings = `'opsz' ${this.value}`;
-};
+// listen for changes
+inputs.forEach(input => input.addEventListener('change', handleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+
+function handleUpdate(e) {      document.querySelector('.range__opsz').style.setProperty(`--${this.id}`, this.value);
+}
+
