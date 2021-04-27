@@ -2,6 +2,7 @@ body {
   padding: 1px;
   margin: 0;
   padding: 0;
+background-color: #C0C0C0			;
 }
 @font-face {
   src: url(fonts/vhswidthGX.ttf);
@@ -36,6 +37,56 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
+
+@keyframes ginto-animation {
+  from {
+    font-variation-settings: "wght" 0, "ital" 0, "NORD" 100;
+  }
+  to {
+    font-variation-settings: "wght" 100, "ital" 100, "NORD" 200;
+  }
+}
+
+.animatedwidth {
+  font-family: 'vhswidth', sans-serif;
+  transition: font-variation-settings 0.3s ease;
+  animation-name: ginto-animation;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+text-align:center;
+}
+
+
+
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+
+
+
 
 .explain {
   font-family: 'vhsregular';
@@ -185,109 +236,6 @@ select {
   margin: 0 auto;
   padding: 0.25rem 0.25rem 0.2rem 0.25rem;
 }
-
-
-.range__opsz {
-  --text-vf-wght: 400;  
-  --text-vf-wdth: 95;
-  --text-vf-opsz: 80;
-  --value-tag: 'opsz';
-  --low-value: 8;
-  --current-value: var(--text-vf-opsz);
-  --high-value: 144;
-
-  .paragraph {
-    background-color: #ffffff;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 95vw;
-    width: 45em;
-  }
-
-  .paragraph .text {
-    font-family: "vhshadow", sans-serif;
-    font-size: 5rem;
-    font-weight: var(--text-vf-wght);
-    font-stretch: calc( var(--text-vf-wdth) * 1% );
-    font-variation-settings: 'opsz' var(--text-vf-opsz);
-    line-height: 7rem;
-    margin: 0 auto 0 auto;
-    text-align: center;
-  }
-
-
-  /* Control buttons */
-  .controls {
-    display: grid;
-    grid-template-columns: min-content 1fr min-content;
-    margin: 2em auto;
-    text-align: center;
-    width: 20rem;
-
-    h3 {
-      display: inline;
-      font-weight: normal;
-      font-family: monospace;
-    }
-    label {
-      float: left;
-      height: 1px;
-      text-indent: -999em;
-      visibility: hidden;
-    }
-    .slider {
-      grid-column: 2/3;
-      input {
-        width: 100%;
-      }
-    }
-    .value-tag {
-      grid-column: span 3;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      text-align: left;
-      &::before {
-        counter-reset: tag var(--value-tag);
-        content: "'" var(--value-tag) "' range";
-        font-family: sans-serif;
-      }
-   }
-    .low-value {
-      grid-column: 1/2;
-      text-align: left;
-      width: 2.5rem;
-      &::before {
-        counter-reset: tag var(--low-value);
-        content: counter(tag);
-        font-family: sans-serif;
-      }
-    }
-    .high-value{
-      grid-column: 4/5;
-      text-align: right;
-      width: 2.5rem;
-    &::before {
-       counter-reset: tag var(--high-value);
-       content: counter(tag);
-       font-family: sans-serif;
-      }
-    }
-    .current-value {
-      grid-column: 2/3;
-      &::before {
-        counter-reset: tag var(--current-value);
-        border: solid 1px black;
-        content: counter(tag);
-        display: inline-block;
-        font-family: sans-serif;
-        min-width: 3rem;
-        margin: 0 auto;
-        padding: 0.25rem 0.25rem 0.2rem 0.25rem;
-      }
-    }
-  }
-}
-
 
 
 

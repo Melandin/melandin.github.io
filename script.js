@@ -8,13 +8,5 @@ grad.oninput = function () {
 };
 
 
-const inputs = [].slice.call(document.querySelectorAll('.range__opsz .controls input'));
-
-// listen for changes
-inputs.forEach(input => input.addEventListener('change', handleUpdate));
-inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-
-
-function handleUpdate(e) {      document.querySelector('.range__opsz').style.setProperty(`--${this.id}`, this.value);
-}
+Splitting()
 
