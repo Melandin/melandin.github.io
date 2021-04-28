@@ -17,32 +17,58 @@ background-color: powderblue;
   font-family: 'vhsregular';
 }
 
-.animated-text {
+
+@keyframes ginto-animation {
+  from {
+    font-variation-settings: "wght" 0, "ital" -20, "opsz" -20;
+  }
+  to {
+    font-variation-settings: "wght" 200, "ital" 20, "opsz" 20;
+  }
+}
+
+
+.anime1 {
   font-family: 'vhswidth', sans-serif;
  font-style: normal;
-background-color:  pink;
  height: 100px;
   width: 100%;
   margin: auto;
   text-align: center;
 vertical-align: middle;
 line-height: 100px;
-  color: #FFFFFF; 
+  color: black; 
 font-variation-settings: 'width' 75;
 }
 
 
-@keyframes ginto-animation {
-  from {
-    font-variation-settings: "wght" 0, "ital" 0, "NORD" 100;
-  }
-  to {
-    font-variation-settings: "wght" 100, "ital" 100, "NORD" 200;
-  }
+.animatedwidth {
+  font-family: 'vhsregular', sans-serif;
+  transition: font-variation-settings 0.3s ease;
+  animation-name: ginto-animation;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+text-align:center;
 }
 
-.animatedwidth {
+
+.animatedital {
   font-family: 'vhswidth', sans-serif;
+  transition: font-variation-settings 0.3s ease;
+  animation-name: ginto-animation;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+text-align:center;
+}
+
+
+
+.animatedopsz {
+  font-family: 'vhsshadow', sans-serif;
   transition: font-variation-settings 0.3s ease;
   animation-name: ginto-animation;
   animation-duration: 1.5s;
