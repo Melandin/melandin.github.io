@@ -2,7 +2,7 @@ body {
   padding: 1px;
   margin: 0;
   padding: 0;
-background-color: #C0C0C0			;
+background-color: powderblue;
 }
 @font-face {
   src: url(fonts/vhswidthGX.ttf);
@@ -16,26 +16,19 @@ background-color: #C0C0C0			;
   src: url(fonts/VHSGX.ttf);
   font-family: 'vhsregular';
 }
-@keyframes ginto-animation {
-  from {
-    font-variation-settings: 'ital' -20;
-  }
-  to {
-    font-variation-settings: 'ital' 20;
-  }
-}
+
 .animated-text {
-  font-family: 'vhsregular', sans-serif;
-  font-variation-settings: 'ital' 1;
-  font-style: normal;
-  color: green;
+  font-family: 'vhswidth', sans-serif;
+ font-style: normal;
+background-color:  pink;
+ height: 100px;
+  width: 100%;
+  margin: auto;
   text-align: center;
-  transition: font-variation-settings 0.3s ease;
-  animation-name: ginto-animation;
-  animation-duration: 1.5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+vertical-align: middle;
+line-height: 100px;
+  color: #FFFFFF; 
+font-variation-settings: 'width' 75;
 }
 
 
@@ -60,13 +53,11 @@ text-align:center;
 }
 
 
-
-
-
 .column {
   float: left;
   width: 33.33%;
   padding: 5px;
+background-color:  pink;
 }
 
 /* Clear floats after image containers */
@@ -77,6 +68,7 @@ text-align:center;
 }
 .row {
   display: flex;
+background-color:  pink;
 }
 
 .column {
@@ -85,19 +77,38 @@ text-align:center;
 }
 
 
+.talks {
+vertical-align: middle;
+line-height: 100px;
+ text-align: center;
+line-height: normal;
+ width: 50%;
+  margin: auto;
 
-
-
+}
 .explain {
   font-family: 'vhsregular';
   text-align: center;
-font-size: 10px;
+font-size: 30px;
+ color: white;
+font-variation-settings: 'ital' 10;
+}
 
+.alphabete { 
+font-family: 'vhsregular';
+  text-align: center;
+  text-align: justify;
+font-size: 180px;
+ color: white;
+width: 50%;
+ margin: auto;
 }
 
 .button-wrapper {
   text-align: center;
   margin: 20px 0;
+
+
 }
 
 .button {
@@ -111,45 +122,60 @@ font-size: 10px;
 }
 
 .button {
+
   font-family: 'vhsregular';
   font-variation-settings: 'ital' 0;
   transition: font-variation-settings 0.3s ease;
   font-size: 7vw;
-  background-color: blue;
-  color: white;
+  background-color:  	#FFFF66;
+  color: red;
   letter-spacing: 0;
   border-radius: 6vw;
   padding: 1vw 3vw 1vw;
   outline: none;
   border: none;
+
 }
 
 .movielist {
-  font-family: 'vhsregular';
-  border-radius: 10px 30px 30px 10px;
+  font-family: 'vhswidth';
+font-variation-settings: 'wght' 10;
   text-align: center;
   font-size: 50px;
+vertical-align: middle;
+line-height: 200px;
+  font-size: 50px;
+color:black; 
+
+   height: 200px;
+  width: 100%;
 }
 
 select {
-  font-family: 'vhsregular';
-  border: solid 1px blue;
-  width: 500px;
-  font-size: 20px;
+  font-family: 'vhswidth';
+  width: 700px;
+height:60px;
+ font-size: 50px;
 }
 
 .range__slant {
   --text-vf-wght: 400;
   --text-vf-wdth: 95;
   --text-vf-ital: 0;
-  --value-tag: 'GRAD';
+
   --low-value: -20;
   --current-value: var(--text-vf-ital);
   --high-value: 20;
+padding:0;
+    margin:0;
+background-color:  	#FFFF66;
+width:50%;
+margin: auto;
   /* Control buttons */
 }
+
 .range__slant .paragraph {
-  background-color: #ffffff;
+
   margin-left: auto;
   margin-right: auto;
   max-width: 95vw;
@@ -160,12 +186,13 @@ select {
   font-variation-settings: 'ital' 1;
   font-style: normal;
   color: red;
-  font-size: 2rem;
+  font-size: 3rem;
   font-variation-settings: 'ital' var(--text-vf-ital);
   transition: font-variation-settings 0.3s ease;
   line-height: 7rem;
   margin:0 auto 0 auto;
   text-align: center;
+
 }
 .range__slant .controls {
   display: grid;
@@ -173,6 +200,7 @@ select {
   margin: 2em auto;
   text-align: center;
   width: 20rem;
+
 }
 .range__slant .controls h3 {
   display: inline;
@@ -237,14 +265,68 @@ select {
   padding: 0.25rem 0.25rem 0.2rem 0.25rem;
 }
 
+.links{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.button1 {
+font-family: 'vhsregular', sans-serif;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 12px;
+ margin:  auto;
+}
+.button2 {
+font-family: 'vhsregular', sans-serif;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 12px;
+ margin:  auto;
+}
 
+.button3 {
+font-family: 'vhsregular', sans-serif;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 12px;
+ margin:  auto;
+}
 
 .scroll-left {
-height: 50px; 
+height: 70px; 
 overflow: hidden;
 position: relative;
-background-color:blue;
+background-color:pink;
   color: white;
+font-size: 40px;
+vertical-align: middle;
+line-height: 100px;
 }
 .scroll-left p {
 font-family: 'vhsregular';
