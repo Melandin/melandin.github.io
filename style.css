@@ -18,6 +18,20 @@ background-color: powderblue;
 }
 
 
+.first {
+  font-family: 'vhswidth', sans-serif;
+ font-style: normal;
+ height: 100px;
+  width: 100%;
+ font-size: 30px;
+  text-align: center;
+vertical-align: middle;
+line-height: 100px;
+  color: white; 
+background-color: pink;
+font-variation-settings: 'width' 75;
+}
+
 @keyframes ginto-animation {
   from {
     font-variation-settings: "wght" 0, "ital" -20, "opsz" -20;
@@ -120,6 +134,14 @@ font-size: 30px;
 font-variation-settings: 'ital' 10;
 }
 
+.write {
+  font-family: 'vhsregular';
+  text-align: center;
+font-size: 50px;
+ color: pink;
+font-variation-settings: 'ital' -10;
+}
+
 .alphabete { 
 font-family: 'vhsregular';
   text-align: center;
@@ -195,7 +217,7 @@ height:60px;
 padding:0;
     margin:0;
 background-color:  	#FFFF66;
-width:50%;
+width:70%;
 margin: auto;
   /* Control buttons */
 }
